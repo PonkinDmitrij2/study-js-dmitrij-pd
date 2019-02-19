@@ -17,6 +17,10 @@ function damage() {
   if (this.life < 0) this.life = 0;
 }
 
+function isLife(person) {
+  return person.life !== 0;
+}
+
 function endFight(name) {
   const text = 'Бой окончен, победитель:';
   console.log(`${text} ${name}`);
@@ -27,13 +31,13 @@ function fight(person1, person2) {
 
   while (true) {
     person1.damage();
-    if (person1.life == 0) {
+    if (!isLife(person1)) {
       endFight(person2.name);
       break;
     }
 
     person2.damage();
-    if (person2.life == 0) {
+    if (!isLife(person2)) {
       endFight(person1.name);
       break;
     }
