@@ -17,21 +17,24 @@ function damage() {
   if (this.life < 0) this.life = 0;
 }
 
-function fight(person1, person2) {
+function endFight(name) {
   const text = 'Бой окончен, победитель:';
+  console.log(`${text} ${name}`);
+}
 
+function fight(person1, person2) {
   console.log('Идет бой...');
 
   while (true) {
     person1.damage();
     if (person1.life == 0) {
-      console.log(`${text} ${person2.name}`);
+      endFight(person2.name);
       break;
     }
 
     person2.damage();
     if (person2.life == 0) {
-      console.log(`${text} ${person1.name}`);
+      endFight(person1.name);
       break;
     }
   }
