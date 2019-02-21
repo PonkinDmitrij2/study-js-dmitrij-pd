@@ -14,7 +14,9 @@ const fighter2 = {
 
 function damage() {
   this.life -= Math.random();
-  if (this.life < 0) this.life = 0;
+  if (this.life < 0) {
+    this.life = 0;
+  }
 }
 
 function isLife(person) {
