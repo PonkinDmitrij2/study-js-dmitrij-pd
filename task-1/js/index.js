@@ -31,19 +31,12 @@ function endFight(name) {
 function fight(person1, person2) {
   console.log('Идет бой...');
 
-  while (true) {
+  while (isLife(person1) && isLife(person2)) {
     person1.damage();
-    if (!isLife(person1)) {
-      endFight(person2.name);
-      break;
-    }
-
     person2.damage();
-    if (!isLife(person2)) {
-      endFight(person1.name);
-      break;
-    }
   }
+
+  (!isLife(person1)) ? endFight(person2.name) : endFight(person1.name);
 }
 
 fight(fighter1, fighter2);
