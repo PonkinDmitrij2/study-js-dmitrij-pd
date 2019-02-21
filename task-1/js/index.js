@@ -20,7 +20,7 @@ function damage() {
 }
 
 function isLife(person) {
-  return person.life !== 0;
+  return person.life > 0;
 }
 
 function endFight(name) {
