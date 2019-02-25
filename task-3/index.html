@@ -9,6 +9,25 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <div class="page-wrapper">
+    <div class="authorization">
+      <form class="authorization__form" action="">
+        <p class="authorization__wrap">
+          <label class="visually-hidden" for="username">User name</label>
+          <input class="authorization__field" id="username" type="text" placeholder="username" required>
+        </p>
+        <p class="authorization__wrap">
+          <label class="visually-hidden" for="password">Password</label>
+          <input class="authorization__field" id="password" type="password" placeholder="password" required>
+        </p>
+        <button class="authorization__submit  btn" type="submit">Login</button>
+      </form>
+      <p class="authorization__info">
+        Not registered?
+        <a class="authorization__link" href="javascript:void(0)">Create an account</a>
+      </p>
+    </div>
+  </div>
   <script src="./js/index.js"></script>
 </body>
 </html>
