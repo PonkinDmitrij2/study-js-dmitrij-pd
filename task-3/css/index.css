@@ -108,6 +108,12 @@ body {
   color: #6d6d6d;
 }
 
+.authorization__error {
+  margin: 0;
+  min-height: 22px;
+  color: #ff0000;
+}
+
 .authorization__info {
   margin: 0;
   margin-top: 20px;
