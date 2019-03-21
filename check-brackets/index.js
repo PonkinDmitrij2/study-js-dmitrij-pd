@@ -38,6 +38,27 @@ const checkBrackets = text => {
   }
 };
 
+// -------------------- Teacher's decision v2. --------------------
+const checkBrackets = text => {
+  const count = text.split('').reduce((acc, item) => {
+    if (acc < 0) {
+      return -1;
+    }
+
+    if (item === '(') {
+      return acc + 1;
+    }
+
+    if (item === ')') {
+      return acc - 1;
+    }
+
+    return acc;
+  }, 0);
+
+  return count === 0;
+};
+
 // console.log( checkBrackets("((dr33)") ); // false
 // console.log( checkBrackets("asd((a)s)()d") ); // true
 // console.log( checkBrackets(")67(") ); // false
